@@ -1,5 +1,12 @@
 # Import necessary libraries
 import streamlit as st
+
+import os
+
+# Set the environment variables from the st.secrets dict
+os.environ['GRADIENT_ACCESS_TOKEN'] = st.secrets["GRADIENT_ACCESS_TOKEN"]
+
+os.environ['GRADIENT_WORKSPACE_ID'] = st.secrets["GRADIENT_WORKSPACE_ID"]
 from gradientai import Gradient
 
 def main():
